@@ -1,0 +1,47 @@
+
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box--user-name seo 
+      %ul.side-header__box--user-menu
+        = fa_icon 'edit'
+        = fa_icon 'cog'
+  .groups
+    .group 
+      %p.group__name sample
+                  
+      %p.group__letest-message Good bye work
+                 
+.chat-main   
+  .main-header  
+    .main-header__left-box
+      %h2.main-header__left-box--current-group sample
+      %ul.main-header__left-box--member-list
+        Members:
+        %li.main-header__left-box--member-list__member
+          seo neko
+    .main-header__edit-btn Edit
+     
+  .messages
+    .message
+      .message__up-info
+        %p.message__up-info--taker
+          seo
+        %p.message__up-info--date
+          2019/09/21 06:16:55
+      %p.message__text
+        zxcv
+  .form
+    %form.new-message
+      .input-box
+        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        
+        %la.input-box__image
+          = fa_icon 'image'
+      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+    
+  
+
+
+
