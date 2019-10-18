@@ -1,17 +1,8 @@
 
-.chat-side
-  .side-header
-    .side-header__box
-      %p.side-header__box--user-name seo 
-      %ul.side-header__box--user-menu
-        = fa_icon 'edit'
-        = fa_icon 'cog'
-  .groups
-    .group 
-      %p.group__name sample
-                  
-      %p.group__letest-message Good bye work
-                 
+.wrapper
+
+  = render 'shared/side_bar'
+
 .chat-main   
   .main-header  
     .main-header__left-box

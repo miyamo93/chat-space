@@ -1,11 +1,13 @@
 
 *{
   box-sizing: border-box;
+  text-decoration: none;
 }
 
   
 
 .chat-side{
+  position: relative;
   color: $white1;
   float: left;
   .side-header{
@@ -17,6 +19,7 @@
     width:300px;
     background-color: #253141;
     &__box{
+      
       display: flex;
       display: flex;
       justify-content: space-between;
@@ -34,6 +37,7 @@
   width: 300px;
   .group{
   margin: 0 0 40px;
+  color: $white1;
   &__name{
     margin-bottom: 5px;
     font-size: 15px;
