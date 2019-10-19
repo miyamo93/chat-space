@@ -1,8 +1,6 @@
 
 .wrapper
-
   = render 'shared/side_bar'
-
 .chat-main   
   .main-header  
     .main-header__left-box
@@ -12,20 +10,13 @@
         %li.main-header__left-box--member-list__member
           seo neko
     .main-header__edit-btn Edit
-     
   .messages
-    .message
-      .message__up-info
-        %p.message__up-info--taker
-          seo
-        %p.message__up-info--date
-          2019/09/21 06:16:55
-      %p.message__text
-        zxcv
+    = render @messages
   .form
-    %form.new-message
-      .input-box
-        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type:"text"}/
-        %la.input-box__image
-          = fa_icon 'image'
-      %input.submit-btn{name: "commit", type: "submit", value: "Send"}/
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
