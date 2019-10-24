@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val(''); //input内のメッセージを消しています。
+      $('#new_message')[0].reset();
       scrollBottom();
       function scrollBottom(){
         var target = $('.message').last();
