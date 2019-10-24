@@ -6,6 +6,9 @@
 a{
   color:$white1;
 }
+li{
+  margin-left: 5px;
+}
 
   
 
@@ -128,6 +131,9 @@ a{
   padding: 20px 50px 20px 40px;
   width:100%;
   float: right;
+  .new_message{
+    display: flex;
+  }
   &__message {
     border: none;
     float: left;
