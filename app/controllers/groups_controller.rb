@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @group.users << current_user
+    @users = @group.users
   end
 
   def create
@@ -24,6 +25,11 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def edit
+    @group = Group.find(params[:id])
+    @users = @group.users
   end
 
   private
