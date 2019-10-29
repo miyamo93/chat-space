@@ -24,7 +24,7 @@
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
-
+      color: black;
       &:after {
         content: '';
         display: block;
@@ -92,7 +92,7 @@
   .field-label {
     .field_with_errors {
       display: inline-block;
-      color: #d65f4c;
+      color: black;
       font-weight: 400;
     }
   }
@@ -109,7 +109,7 @@
         right: 0;
         bottom: 0;
         width: 5px;
-        background-color: #d65f4c;
+        background-color:black;
       }
     }
   }
